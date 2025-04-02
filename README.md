@@ -50,4 +50,9 @@ sudo du -h --max-depth=1 /home/media/video/ | sort -hr | head -10
 ```
 ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 $1
 ```
+### how to mount a usb drive
 
+```
+lsblk
+sudo mount /dev/sda1 /mnt/usb
+```

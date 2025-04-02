@@ -37,3 +37,10 @@ sudo mount -t cifs //<IPADDRESS>/<FOLDER NAME> /mnt/tv -o username=<User>,passwo
 
 
 ```
+
+### Show size of folders
+
+```
+sudo du -h --max-depth=1 /home/media/video/ | sort -hr | head -10
+
+```

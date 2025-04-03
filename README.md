@@ -1,8 +1,8 @@
 # commands
 
-[Windows](#Windows-Disk-Management)
-[Linux](#Linux-Disk-Management)
-[AWS](#AWS-Commands)
+- [Windows](#Windows-Disk-Management)
+- [Linux](#Linux-Disk-Management)
+- [AWS](#AWS-Commands)
 
 
 ## Windows Disk Management 

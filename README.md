@@ -62,6 +62,8 @@ sudo mount /dev/sda1 /mnt/usb
 ```
 
 ## AWS Commands
+### AWS get secret from parameter store
+
 ```bash
-aws ssm get-parameter --name "/gousto/pickles/service/plannedcapacity/MESSAGE_ARN" |  jq -r '.Parameter.Value'
+aws ssm get-parameter --name "/gousto/pickles/service/plannedcapacity/MESSAGE_ARN" --with-decryption |  jq -r '.Parameter.Value'
 ```

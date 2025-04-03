@@ -1,5 +1,9 @@
 # commands
 
+[Windows](#Windows-Disk-Management)
+[Linux](#Linux-Disk-Management)
+[AWS](#AWS-Commands)
+
 
 ## Windows Disk Management 
 ### Assign Drive
@@ -28,17 +32,17 @@ xcopy E:\YourFolder D:\YourFolder /E /I
 /I → Assumes the destination is a folder.
 
 
-## Linux Disk Managment 
+## Linux Disk Management 
 ### Assign network drive on windows system
 
-```
+```bash
 sudo mount -t cifs //<IPADDRESS>/<FOLDER NAME> /mnt/tv -o username=<User>,password=<Password>
 
 ```
 
 ### Show size of folders
 
-```
+```bash
 sudo du -h --max-depth=1 /home/media/video/ | sort -hr | head -10
 
 ```
@@ -47,7 +51,7 @@ sudo du -h --max-depth=1 /home/media/video/ | sort -hr | head -10
 ### Get video Resolution
 
 
-```
+```bash
 ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 $1
 ```
 ### how to mount a usb drive
@@ -55,4 +59,9 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 ```
 lsblk
 sudo mount /dev/sda1 /mnt/usb
+```
+
+## AWS Commands
+```bash
+aws ssm get-parameter --name "/gousto/pickles/service/plannedcapacity/MESSAGE_ARN" |  jq -r '.Parameter.Value'
 ```

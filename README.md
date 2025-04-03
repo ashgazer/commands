@@ -7,7 +7,7 @@
 
 ## Windows Disk Management 
 ### Assign Drive
-```
+```powershell
 diskpart
 list volume
 select volume <X>
@@ -16,14 +16,14 @@ exit
 ```
 
 ### Detach Drive
-```
+```powershell
 diskpart
 list volume
 select volume <X>
 remove all dismount
 ```
 ### Copy
-```
+```powershell
 xcopy E:\YourFolder D:\YourFolder /E /I
 ```
 
@@ -62,7 +62,7 @@ sudo mount /dev/sda1 /mnt/usb
 ```
 
 ## AWS Commands
-### AWS get secret from parameter store
+### Get secret from parameter store
 
 ```bash
 aws ssm get-parameter --name "/gousto/pickles/service/plannedcapacity/MESSAGE_ARN" --with-decryption |  jq -r '.Parameter.Value'

@@ -67,3 +67,18 @@ sudo mount /dev/sda1 /mnt/usb
 ```bash
 aws ssm get-parameter --name "/gousto/pickles/service/plannedcapacity/MESSAGE_ARN" --with-decryption |  jq -r '.Parameter.Value'
 ```
+
+
+```
+aws logs filter-log-events \
+  --log-group-name ecs-production-service-core-webserver-appLog \
+  --filter-pattern "ERROR" \
+  --start-time $(date -d '1 hour ago' +%s)000 \
+  --end-time $(date +%s)000
+
+```
+# Kill cloudflare (until restart)
+
+```
+sudo launchctl bootout system /Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist
+```

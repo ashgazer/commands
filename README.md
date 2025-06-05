@@ -3,6 +3,7 @@
 - [Windows](#Windows-Disk-Management)
 - [Linux](#Linux-Disk-Management)
 - [AWS](#AWS-Commands)
+- [Networling](#Networking)
 
 
 ## Windows Disk Management 
@@ -82,3 +83,9 @@ aws logs filter-log-events \
 ```
 sudo launchctl bootout system /Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist
 ```
+
+## Networking
+
+```
+nmap -sn 192.168.1.0/24
+-sn does a "ping scan" — discovers hosts but doesn’t port scan them.```

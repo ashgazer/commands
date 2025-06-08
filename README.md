@@ -32,6 +32,11 @@ xcopy E:\YourFolder D:\YourFolder /E /I
 
 /I → Assumes the destination is a folder.
 
+### Shutdown
+```
+shutdown /s /f /t 0
+```
+
 
 ## Linux Disk Management 
 ### Assign network drive on windows system

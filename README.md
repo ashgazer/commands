@@ -69,6 +69,10 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 lsblk
 sudo mount /dev/sda1 /mnt/usb
 ```
+### get logs size
+```
+sudo du -sh /var/log/*
+```
 
 ## AWS Commands
 ### Get secret from parameter store

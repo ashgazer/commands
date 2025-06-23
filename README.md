@@ -36,7 +36,10 @@ xcopy E:\YourFolder D:\YourFolder /E /I
 ```
 shutdown /s /f /t 0
 ```
-
+### find md5 hash of a file
+```
+certutil -hashfile <file> MD5
+```
 
 ## Linux Disk Management 
 ### Assign network drive on windows system

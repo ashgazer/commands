@@ -2,7 +2,7 @@
 
 - [Windows](#Windows-Disk-Management)
 - [Linux](#Linux-Disk-Management)
-  -[Logs](#Logs) 
+  - [Logs](#Logs) 
 - [AWS](#AWS-Commands)
 - [Networling](#Networking)
 

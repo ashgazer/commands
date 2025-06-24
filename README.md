@@ -69,11 +69,13 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 lsblk
 sudo mount /dev/sda1 /mnt/usb
 ```
-### get logs size
+### Logs
+
+#### get logs size
 ```
 sudo du -sh /var/log/*
 ```
-### clean system logs
+###¢ clean system logs
 ```
 sudo journalctl --vacuum-time=7d
 ```

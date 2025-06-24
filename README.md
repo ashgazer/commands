@@ -75,7 +75,7 @@ sudo mount /dev/sda1 /mnt/usb
 ```
 sudo du -sh /var/log/*
 ```
-###¢ clean system logs
+#### clean system logs
 ```
 sudo journalctl --vacuum-time=7d
 ```

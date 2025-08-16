@@ -33,6 +33,12 @@ xcopy E:\YourFolder D:\YourFolder /E /I
 
 /I → Assumes the destination is a folder.
 
+### Search For files (grep like)
+```
+dir | findstr /i lev
+```
+/i makes it case sensative like in -i in grep
+
 ### Shutdown
 ```
 shutdown /s /f /t 0

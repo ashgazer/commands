@@ -28,6 +28,9 @@ remove all dismount
 ```powershell
 xcopy E:\YourFolder D:\YourFolder /E /I
 ```
+## Robocopy
+```robocopy links otherfolder /E
+```
 
 /E → Copies all subdirectories, even if they are empty.
 

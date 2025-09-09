@@ -5,6 +5,7 @@
   - [Logs](#Logs) 
 - [AWS](#AWS-Commands)
 - [Networking](#Networking)
+- [Audiobook Shelf](#Audio-Book-Shelf)
 
 
 ## Windows Disk Management 
@@ -127,5 +128,21 @@ sudo tailscaled
 
 ```
 tailscale up
+```
+
+## Audio Book Shelf
+
+```
+docker pull ghcr.io/advplyr/audiobookshelf
+
+docker run -d \
+ -p 13378:13378 \
+ -v /mnt/usb/Audiobookshelf/config:/config \
+ -v /mnt/usb/Audiobookshelf/metadata:/metadata \
+ -v /mnt/usb/Audiobooks:/audiobooks \
+ -v /mnt/usb/Audiobooks/podcasts:/podcasts \
+ --name audiobookshelf \
+ -e TZ="Europe/London" \
+ ghcr.io/advplyr/audiobookshelf
 ```
 
